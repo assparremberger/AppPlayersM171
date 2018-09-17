@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "73548959776",
+    "firebase_url": "https://adaltoappplayersm171.firebaseio.com",
+    "project_id": "adaltoappplayersm171",
+    "storage_bucket": "adaltoappplayersm171.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73548959776:android:59338412b2f6989e",
+        "android_client_info": {
+          "package_name": "com.inf3m171.adalto.appplayersm171"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73548959776-kt45vsta3ocor3q3og8p0ufr1t2befpi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh-BzYsMU0KHE6dPQGGn-We0nwePYzb8o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
