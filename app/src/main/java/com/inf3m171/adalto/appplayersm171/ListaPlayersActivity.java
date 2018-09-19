@@ -6,10 +6,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -99,5 +102,36 @@ public class ListaPlayersActivity extends AppCompatActivity {
             }
         };
 
+        queryRef.addChildEventListener( childEventListener );
+
+    }
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        queryRef.removeEventListener( childEventListener );
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        menu.add("Sair");
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if ( item.toString().equals("Sair")){
+            FirebaseAuth.getInstance().signOut();
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
